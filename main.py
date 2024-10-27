@@ -14,7 +14,7 @@ moscow_parser=cianparser.CianParser(location="Долгопрудный")
 
 def fetch_flats(moscow_parser, page):
     try:
-        data = moscow_parser.get_flats(deal_type="sale", rooms=(2),
+        data = moscow_parser.get_flats(deal_type="sale", rooms=(1,2,3),
                                        additional_settings={"start_page": page, "end_page": page})
         for flat in data:
             flat.pop('url', None)
